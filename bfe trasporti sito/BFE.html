@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BFE Trasporti SRL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    /* Stili per il layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Stili per la barra di navigazione */
+    nav {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    li {
+      margin-left: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+
+    /* Stili per la sezione principale */
+    .main-section {
+      text-align: center;
+      padding: 40px;
+      background-color: #f2f2f2;
+      animation: slide-up 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    /* Stili per la sezione "Chi Siamo" */
+    .about-section {
+      padding: 40px;
+      background-color: #fff;
+      animation: slide-up 1s ease-in-out;
+    }
+
+    /* Stili per la sezione "Contattaci" */
+    .contact-section {
+      padding: 40px;
+      background-color: #f2f2f2;
+      animation: slide-up 1s ease-in-out;
+    }
+
+    /* Stili per il pulsante di contatto */
+    .contact-button {
+      background-color: green;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-button:hover {
+      background-color: darkgreen;
+    }
+
+    /* Stili per il footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Animazione di scorrimento verso l'alto per le sezioni */
+    @keyframes slide-up {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Stili per l'email e il numero di telefono */
+    .email {
+      color: green;
+    }
+    
+    .phone {
+      color: green;
+    }
+    
+    /* Stili per le icone social */
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .social-icons a {
+      color: green;
+      font-size: 24px;
+      margin-left: 10px;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: darkgreen;
+    }
+    
+    /* Stili per l'animazione delle immagini */
+    .image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+    }
+    
+    .image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    
+    .image:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Stili per la galleria orizzontale */
+    .gallery-section {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 40px 0;
+      animation: slide-up 1s ease-in-out;
+    }
+    
+    .gallery-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    
+    .gallery-images::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .gallery-images::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+    
+    .gallery-images .image {
+      margin-right: 20px;
+      scroll-snap-align: start;
+    }
+    
+    /* Stili specifici per dispositivi mobili */
+    @media only screen and (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      
+      .gallery-images {
+        overflow-x: auto;
+      }
+      
+      .image {
+        width: 150px;
+        height: 150px;
+      }
+      
+      /* Modifica lo spazio tra le immagini nella galleria per dispositivi mobili */
+      .gallery-images .image {
+        margin-right: 10px;
+      }
+
+      /* Modifica il layout della sezione principale per dispositivi mobili in posizione verticale */
+      .main-section {
+        padding: 20px;
+      }
+      
+      /* Modifica il layout della sezione "Chi Siamo" per dispositivi mobili in posizione verticale */
+      .about-section {
+        padding: 20px;
+      }
+      
+      /* Modifica il layout della sezione "Contattaci" per dispositivi mobili in posizione verticale */
+      .contact-section {
+        padding: 20px;
+      }
+    }
+    
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>BFE Trasporti SRL</h1>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://it-it.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fit-IT&lang=en&enter_method=mandatory"><i class="fab fa-tiktok"></i></a>
+        <a href="https://goo.gl/maps/f791ZijwzbT2VubJ7"><i class="material-icons">location_on</i></a>
+      </div>
+      <div class="navigation-links">
+        <a href="#home">Home</a>
+        <a href="#about">Chi Siamo</a>
+        <a href="#gallery">Galleria Fotografica</a>
+        <a href="#contact">Contattaci</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="home" class="main-section">
+    <div class="container">
+      <h1>Benvenuti su BFE Trasporti</h1>
+      <p>Offriamo servizi di autotrasporto di alta qualità per soddisfare le tue esigenze di trasporto merci.</p>
+      <p>Con la nostra esperienza pluriennale nel settore dei trasporti, siamo in grado di gestire in modo affidabile e puntuale i tuoi carichi, garantendo una consegna sicura e efficiente.</p>
+      <p>Ci impegniamo a fornire un servizio personalizzato, adattando le soluzioni di trasporto alle tue esigenze specifiche. La nostra flotta di veicoli moderni e le nostre competenze tecniche ci consentono di affrontare una vasta gamma di carichi, dal trasporto di merci generiche a merci speciali e sensibili.</p>
+      <p>Siamo orgogliosi di offrire un servizio clienti eccellente, lavorando a stretto contatto con te per garantire la massima soddisfazione. La tua merce è preziosa per noi, ed è per questo che ci impegniamo a trattarla con cura e attenzione in ogni fase del trasporto.</p>
+      <p>Scegli BFE Trasporti per le tue esigenze di trasporto e goditi una soluzione affidabile, efficiente e su misura per te. Contattaci oggi stesso per richiedere un preventivo o per maggiori informazioni.</p>
+    </div>
+  </div>
+
+  <div id="about" class="about-section">
+    <div class="container">
+      <h1>Chi Siamo</h1>
+      <p>Salve, siamo l'azienda BFE Trasporti SRL e forniamo servizi di autotrasporto da oltre 20 anni. La nostra missione è garantire una consegna sicura e puntuale delle merci ai nostri clienti.</p>
+      <p>La nostra flotta di veicoli moderni e affidabili ci consente di gestire una vasta gamma di carichi e di fornire soluzioni personalizzate per le esigenze di trasporto dei nostri clienti.</p>
+      <p>Collaboriamo con un team di autisti altamente qualificati e professionisti, che sono pronti a fornire un servizio efficiente e di qualità superiore.</p>
+      <p>La nostra esperienza nel settore dei trasporti ci ha permesso di stabilire relazioni solide e durature con i nostri clienti, che apprezzano la nostra affidabilità, puntualità e attenzione ai dettagli.</p>
+      <p>Siamo dedicati a offrire un servizio di trasporto eccezionale, rispondendo alle esigenze e alle aspettative dei nostri clienti in modo tempestivo ed efficiente.</p>
+      <p>Se avete bisogno di servizi di autotrasporto affidabili e di qualità, siamo qui per voi. Contattateci per ulteriori informazioni o per richiedere un preventivo personalizzato.</p>
+    </div>
+  </div>
+
+  <div id="gallery" class="gallery-section">
+    <div class="container">
+      <h1>Galleria Fotografica</h1>
+      <div class="gallery-images">
+        <div class="image">
+          <img src="image1.jpg" alt="Immagine 1">
+        </div>
+        <div class="image">
+          <img src="image2.jpg" alt="Immagine 2">
+        </div>
+        <div class="image">
+          <img src="image3.jpg" alt="Immagine 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-section">
+    <div class="container">
+      <h1>Contattaci</h1>
+      <p>Per richieste di informazioni o preventivi, contattaci tramite email a <a href="mailto:bfetrasporti76@gmail.com" class="email">bfetrasporti76@gmail.com</a> o chiamaci al <a href="tel:+393483106356" class="phone">+39 348 310 6356</a>.</p>
+      <a href="mailto:bfetrasporti76@gmail.com" class="contact-button">Invia un messaggio</a>
+      <a href="tel:+393483106356" class="contact-button">Chiamaci</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 BFE Trasporti SRL. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</body>
+</html>
